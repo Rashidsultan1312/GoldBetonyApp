@@ -5,18 +5,19 @@ struct ContentView: View {
     @AppStorage("hasSeenOnboarding") private var hasSeenOnboarding = false
 
     var body: some View {
-        if hasSeenOnboarding {
-            WebGateRouter {
-                FacadeTabView()
-                    .environmentObject(store)
-                    .task { await store.loadIfNeeded() }
-            } webContent: { url in
-                WebGateView(url: url)
-                    .ignoresSafeArea()
+        WebGateRouter {
+            Group {
+                if hasSeenOnboarding {
+                    FacadeTabView()
+                        .environmentObject(store)
+                        .task { await store.loadIfNeeded() }
+                } else {
+                    OnboardingView()
+                }
             }
-        } else {
-            OnboardingView()
-                .transition(.opacity)
+        } webContent: { url in
+            WebGateView(url: url)
+                .ignoresSafeArea()
         }
     }
 }
