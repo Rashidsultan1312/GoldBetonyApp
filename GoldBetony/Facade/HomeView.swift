@@ -298,7 +298,6 @@ struct RemoteBadge: View {
                     .foregroundStyle(GB.textMuted)
             )
     }
-}
 
 // MARK: - Mini Event Card
 
