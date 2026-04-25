@@ -103,6 +103,7 @@
 				E10005 /* WebGate */,
 				E10006 /* Facade */,
 				B10018 /* Assets.xcassets */,
+				B10030 /* PrivacyInfo.xcprivacy */,
 			);
 			path = GoldBetony;
 			sourceTree = "<group>";
