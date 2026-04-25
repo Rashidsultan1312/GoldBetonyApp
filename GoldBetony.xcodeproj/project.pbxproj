@@ -36,6 +36,7 @@
 		A10027 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10027; };
 		A10028 /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10028; };
 		A10029 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10029; };
+		A10030 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = B10030; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
