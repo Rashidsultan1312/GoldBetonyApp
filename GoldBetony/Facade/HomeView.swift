@@ -229,7 +229,7 @@ struct HomeView: View {
     }
 
     private func formatTimestamp(_ ts: String?) -> String {
-        guard let ts else { return "TBD" }
+        guard let ts else { return "-" }
         let df = ISO8601DateFormatter()
         df.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
         if let date = df.date(from: ts) {
