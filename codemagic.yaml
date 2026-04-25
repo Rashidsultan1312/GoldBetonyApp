@@ -7,8 +7,8 @@ workflows:
     environment:
       xcode: latest
       vars:
-        XCODE_PROJECT: "habittracker.xcodeproj"
-        XCODE_SCHEME: "habittracker"
+        XCODE_PROJECT: "GoldBetony.xcodeproj"
+        XCODE_SCHEME: "GoldBetony"
 
     scripts:
       - name: Show Xcode project info
