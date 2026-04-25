@@ -263,18 +263,30 @@ struct RemoteBadge: View {
                 case .success(let img):
                     img.resizable().scaledToFit()
                 case .failure:
-                    placeholder
+                    fallbackBadge
                 case .empty:
                     ProgressView().tint(GB.textMuted)
                 @unknown default:
-                    placeholder
+                    fallbackBadge
                 }
             }
             .frame(width: size, height: size)
         } else {
-            placeholder
+            fallbackBadge
         }
     }
+
+    private var fallbackBadge: some View {
+        Circle()
+            .fill(GB.surface)
+            .frame(width: size, height: size)
+            .overlay(
+                Image(systemName: "shield.fill")
+                    .font(.system(size: size * 0.45))
+                    .foregroundStyle(GB.textMuted)
+            )
+    }
+}
 
     private var placeholder: some View {
         Circle()
