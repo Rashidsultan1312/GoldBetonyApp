@@ -288,17 +288,6 @@ struct RemoteBadge: View {
     }
 }
 
-    private var placeholder: some View {
-        Circle()
-            .fill(GB.surface)
-            .frame(width: size, height: size)
-            .overlay(
-                Image(systemName: "shield.fill")
-                    .font(.system(size: size * 0.45))
-                    .foregroundStyle(GB.textMuted)
-            )
-    }
-
 // MARK: - Mini Event Card
 
 struct MiniEventCard: View {
